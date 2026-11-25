@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Api\MahasiswaController;
+use App\Http\Controllers\Api\MataKuliahController;
 use Illuminate\Support\Facades\Route;
 
-// Semua route di file ini otomatis memakai prefix /api (diatur di bootstrap/app.php)
 Route::apiResource('mahasiswa', MahasiswaController::class);
+Route::apiResource('matkul', MataKuliahController::class)->only(['index', 'show', 'store']);
